@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "Divina";
+    src: url("../font/William Christmas.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+main{
+    background-color: #fffcf9;
+}
+
+/*---------------->Cabecera*/
+
+header .titulo{
+    margin: 0 auto;
+    padding:45px;
+    background-color: #f0e0d3;
+    border-radius: 1.5rem;
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+header .titulo .logo{
+    height:250px;
+}
+
+header .titulo  h1{ 
+    font-family: "Divina",sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+
+header .titulo h1::after{ 
+    content: '';
+    display: block;
+    width: 40%;
+    height: 4px;
+    background-color: #b88a64;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+header .carrusel {
+    border-radius: 1.5rem;
+    padding: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+header .carrusel .carousel {
+    background-color: #f0e0d3;
+    border-radius: 1.5rem;
+    padding: 30px 0;
+}
+
+header .carrusel .carousel-inner img {
+    max-height: 500px; 
+    object-fit: cover;
+    width: 100%;
+}
+
+header #carouselExample .carousel-control-next .carousel-control-next-icon{
+    background-color: #d4b398;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+header #carouselExample .carousel-control-prev .carousel-control-prev-icon{
+    background-color: #d4b398;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+header .descripcion::before{ 
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #f0e0d3;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+}
+
+header .descripcion{
+    font-family: "Jost", sans-serif;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/*---------------->Cuerpo*/
+
+section{
+    margin: 150px 0 150px 0;
+}
+
+section article .container .pasteles_predisenados{
+    margin: 100px 0 100px 0;
+    align-items: center;
+}
+
+section article .container .pasteles_predisenados .texto {
+    border-left: 2px solid #d4b398;
+    padding-left: 30px;
+}
+
+section article .container .pasteles_predisenados div p, h2, a{
+    font-family: "Jost", sans-serif;
+    text-align: left;
+    width: 100%;
+}
+
+section article .container .pasteles_predisenados div img{
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+section article .container .pasteles_predisenados div .text-left button{
+    background: #f0e0d3;
+    border: none;
+    padding: 10px;
+    border-radius: 1.5rem;
+}
+
+section article .container .pasteles_predisenados div .text-left button:hover{
+    background: #b88a64;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+/*---------------->Footer*/
+
+footer{
+    max-width: 100%;
+    background-color: #f0e0d3;
+    position: relative;
+}
+
+footer .container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%;
+    max-width: 100%;
+/*     padding-left:20px;
+    padding-right: 20px; */
+}
+
+footer .container .row{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+footer .container .row a{
+    text-decoration: none;
+    color: black;
+}
+
+/*---------------->Responsive*/
+
+@media (max-width: 768px) {
+    section article .container .pasteles_predisenados div p, h2, a{
+        text-align: center;
+    }
+
+    section article .container .pasteles_predisenados div img{
+        margin-top: 20px;
+    }
+
+}
+

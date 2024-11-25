@@ -1,0 +1,77 @@
+
+/*---------------->Título*/
+.titulo {
+    background-color: #f0e0d3;
+    padding: 3rem 0px;
+    border-radius: 0 0 50px 50px;
+}
+
+.titulo h2::after {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 4px;
+    background-color: #b88a64;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/*---------------->Cards*/
+
+.container .row .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container .row .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .row .card .card-img-wrapper {
+    background-color:#f0e0d3;
+    padding: 20px;
+    transition: 0.3s;
+    height: 300px;
+}
+
+.container .row .card .card-img-wrapper:hover {
+    background-color:#b88a64;
+}
+
+.container .row .card .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
+
+
+
+/*---------------->Footer*/
+
+footer{
+    max-width: 100%;
+    background-color: #ffeaea;
+    position: relative;
+}
+
+footer .container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%;
+    max-width: 100%;
+/*     padding-left:20px;
+    padding-right: 20px; */
+}
+
+footer .container .row{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+footer .container .row a{
+    text-decoration: none;
+    color: black;
+}

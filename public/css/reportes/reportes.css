@@ -1,0 +1,121 @@
+:root {
+    --color-principal: #b88a64;
+    --color-secundario: #d4b398;
+    --color-blanco: white;
+    --fuente-titulo: "Jockey One", serif;
+    --fuente-texto: "Inter", serif;
+}
+
+.botones {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.btn-outline-primary {
+    color: var(--color-principal);
+    border-color: var(--color-principal);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    color: var(--color-principal) !important;
+    border-color: var(--color-principal) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-primary:active {
+    background-color: var(--color-secundario);
+    border-color: var(--color-principal);
+    color: var(--color-blanco); 
+}
+
+.btn-check:checked + .btn-outline-primary {
+    background-color: var(--color-secundario);
+    border-color: var(--color-principal);
+    color: var(--color-blanco); 
+}
+
+.formulario {
+    display: none;
+    padding-left: 50px;
+} 
+
+.formulario h3 {
+    font-family: var(--fuente-titulo);
+}
+
+.formulario label, input, select, option {
+    font-family: var(--fuente-texto);
+}
+
+.btn-primary {
+    background-color: var(--color-principal);
+    color: var(--color-blanco); 
+    border: none;
+}
+  
+.btn-primary:hover {
+    background-color: var(--color-secundario); 
+}
+
+.resultados {
+    font-family: var(--fuente-texto);
+    color: black;
+    font-weight: bold;
+}
+
+.resultados .title {
+    font-family: var(--fuente-titulo);
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.resultados .fecha {
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+.resultados .ganacias, 
+.resultados .empleado,  
+.resultados .pedidos {
+    border: 1.5px solid black;
+    padding: 10px;
+    width: 93%; 
+    margin: 0 auto; 
+    border-radius: 1rem;
+}
+
+.datos-pdf {
+    margin-left: 50px;
+}
+
+.tabla {
+    margin: 50px;
+}
+
+.tabla th {
+    background-color: var(--color-principal);
+}
+
+.grafica {
+    margin: 60px;
+}
+
+#graficoVentasSem {
+    width: 80%; 
+    height: 500px;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-regresar {
+    margin-top: 1.5rem;
+    margin-left: 50px;
+}
+
+
+
+

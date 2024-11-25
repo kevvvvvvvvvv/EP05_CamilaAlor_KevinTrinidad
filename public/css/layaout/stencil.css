@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+:root{
+    --color-barra-lateral: #f0e0d3;
+    --color-texto:rgb(0,0,0);
+    --color-texto-menu:rgb(0, 0, 0);
+
+    --color-menu-hover:rgb(238,238,238);
+    --color-menu-hover-texto:rgb(0,0,0);
+
+    --color-boton:rgb(0,0,0);
+    --color-boton-texto:rgb(255,255,255);
+
+    --color-linea:rgb(180,180,180);
+
+    --color-switch-base :rgb(201,202,206);
+    --color-switch-circulo:rgb(241,241,241);
+
+    --color-scroll:rgb(192,192,192);
+    --color-scroll-hover:rgb(134,134,134);
+}
+
+.dark-mode{
+    --color-barra-lateral:rgb(44,45,49);
+
+    --color-texto:rgb(255,255,255);
+    --color-texto-menu:rgb(110,110,117);
+
+    --color-menu-hover:rgb(0,0,0);
+    --color-menu-hover-texto:rgb(238,238,238);
+
+    --color-boton:rgb(255,255,255);
+    --color-boton-texto:rgb(0,0,0);
+
+    --color-linea:rgb(90,90,90);
+
+    --color-switch-base :rgb(39,205,64);
+    --color-switch-circulo:rgb(255,255,255);
+
+    --color-scroll:rgb(68,69,74);
+    --color-scroll-hover:rgb(85,85,85);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+/*-----------------Menu*/
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
+
+/*----------------Barra Lateral*/
+.barra-lateral{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 100%;
+    padding: 20px 15px;
+    background-color: var(--color-barra-lateral);
+    transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
+    z-index: 50;
+    border-right:1px solid gray ; 
+    
+}
+
+.mini-barra-lateral{
+    width: 110px;
+    overflow: visible;
+}
+
+.barra-lateral span{
+    width: 100px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease,width 0.5s ease;
+}
+
+.barra-lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+
+/*------------> Nombre de la página */
+.barra-lateral .nombre-pagina{
+    width: 100%;
+    height: 95px;
+    color: var(--color-texto);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+.barra-lateral .nombre-pagina img{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+.barra-lateral .nombre-pagina span{
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+/*--------------> Menu Navegación*/
+.barra-lateral .navegacion{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra-lateral .navegacion::-webkit-scrollbar{
+    width: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb{
+    background-color: var(--color-scroll);
+    border-radius: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-scroll-hover);
+}
+
+.barra-lateral .navegacion ul{  
+    padding: 0;
+}
+
+.barra-lateral .navegacion li{  
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.barra-lateral .navegacion .dropdown{
+    position: relative !important;
+    width: 100% !important;
+}
+
+.barra-lateral .navegacion .dropdown span{
+    margin-right: 30px;
+}
+
+.barra-lateral .navegacion .dropdown .dropdown-menu{
+    position: absolute !important;
+    min-width: 220px !important;      
+    z-index: 10000 !important; 
+    overflow: visible !important;
+}
+
+.barra-lateral .navegacion .dropdown .dropdown-toggle{
+    border: none !important;
+    width: 100% !important;
+    height: 45px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    border-radius: 10px !important;
+    color: var(--color-texto-menu) !important;
+    background-color: var(--color-barra-lateral);
+    overflow: hidden !important;
+}
+
+.barra-lateral .navegacion .contenedor .contenedor-secundario i{
+    min-width: 50px;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.barra-lateral .navegacion .contenedor{
+    position: relative !important;
+    width: 100% !important;
+}
+
+.barra-lateral .navegacion .contenedor a{
+    text-decoration: none;
+}
+
+.barra-lateral .navegacion .contenedor span{
+    margin-right: 30px;
+    
+}
+
+.barra-lateral .navegacion .contenedor .contenedor-secundario{
+    border: none !important;
+    width: 100% !important;
+    height: 45px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    border-radius: 10px !important;
+    color: var(--color-texto-menu) !important;
+    background-color: var(--color-barra-lateral);
+    overflow: hidden !important;
+
+}
+
+.barra-lateral .navegacion .dropdown .dropdown-toggle i{
+    min-width: 50px;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.barra-lateral .navegacion .dropdown-toggle:hover{
+    background-color: var(--color-menu-hover) !important;
+    color: var(--color-menu-hover-texto) !important;
+}
+
+.barra-lateral .navegacion .contenedor .contenedor-secundario:hover{
+    background-color: var(--color-menu-hover) !important;
+    color: var(--color-menu-hover-texto) !important;
+}
+
+/*-----------------> Linea*/
+.barra-lateral .linea{
+    width: 100%;
+    height: 1px;
+    margin-top: 15px;
+    background-color: var(--color-linea);
+}
+
+/*----------------> Cerrar sesión*/
+
+.barra-lateral .logout{
+    position: relative !important;
+    width: 100% !important;
+    overflow: visible !important; 
+    margin: 10px 0 10px 0;
+}
+
+.barra-lateral .logout .content{
+    border: none !important;
+    width: 100% !important;
+    height: 45px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: var(--color-texto-menu) !important;
+    background-color: var(--color-barra-lateral);
+}
+
+.barra-lateral .logout .content button{
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--color-texto-menu);
+    text-decoration: none;
+    border: none;
+    background-color: var(--color-barra-lateral);
+    border-radius: 10px;
+}
+
+.barra-lateral .logout .content i{
+    text-align: center;
+    min-width: 50px;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.barra-lateral .logout .content button p{
+    width: 100%; 
+}
+
+
+
+.barra-lateral .logout .content button p{
+    width: 100%; 
+    text-align: left; 
+    margin: 0; 
+}
+
+.mini-barra-lateral .logout .content button p{
+    display: none;
+}
+
+.barra-lateral .logout .content button:hover{
+    color: var(--color-menu-hover-texto);
+    background-color: var(--color-menu-hover);
+}
+
+
+/*----------------> Iniciar sesión*/
+
+.login{
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    height: 45px;
+}
+
+.login a{
+    text-decoration: none;
+}
+
+.login .content i{
+    text-align: center;
+    min-width: 50px;
+    font-size: 20px;
+    margin-left: 15px;
+    color: var(--color-texto);
+}
+
+.login .content p{
+    padding-left: 0;
+    margin-left: 0;
+    color: var(--color-texto);
+}
+
+.mini-barra-lateral .login  .content  p{
+    display: none;
+}
+
+.barra-lateral .login:hover{
+    background-color: var(--color-menu-hover) !important;
+    color: var(--color-menu-hover-texto) !important;
+}
+
+/*---------------> Usuario*/
+.barra-lateral .usuario{
+    width: 100%;
+    display: flex;
+}
+.barra-lateral .usuario img{
+    width: 50px;
+    min-width: 50px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.barra-lateral .usuario .info-usuario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-texto);
+    overflow: hidden;
+}
+.barra-lateral .usuario .nombre-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.barra-lateral .usuario .nombre{
+    font-size: 15px;
+    font-weight: 600;
+}
+.barra-lateral .usuario .email{
+    font-size: 13px;
+}
+.barra-lateral .usuario ion-icon{
+    font-size: 20px;
+}
+
+
+/*-------------main*/
+
+main{
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+}
+
+footer{
+    margin-left: 250px;
+    position: relative;
+    transition: margin-left 0.5s ease;
+    box-sizing: border-box;
+    clear: both;
+}
+
+main.min-main{
+    margin-left: 100px;
+}
+
+footer.min-main{
+    margin-left: 100px;
+}
+
+/*------------------> Responsive*/
+@media (max-height: 660px){
+    .barra-lateral .nombre-pagina{
+        margin-bottom: 5px;
+    }
+    .barra-lateral .modo-oscuro{
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 600px){
+    .barra-lateral{
+        position: fixed;
+        left: -250px;
+    }
+    .max-barra-lateral{
+        left: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu ion-icon:nth-child(2){
+        display: none;
+    }
+
+    main{
+        margin-left: 0;
+    }
+
+    main.min-main{
+        margin-left: 0;
+    }
+    
+    footer{
+        margin-left: 0;
+    }
+    footer.min-main{
+        margin-left: 0;
+    }
+
+
+}

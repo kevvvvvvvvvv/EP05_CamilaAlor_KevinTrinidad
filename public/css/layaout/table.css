@@ -1,0 +1,121 @@
+:root{ 
+    --color-boton-eliminar: #d4b398;
+    --color-tabla: #eee0d5;
+    --color-boton-eliminar-hover: #745531;
+    --color-boton-actualizar: #9d523b;
+    --color-boton-actualizar-hover: #4d0101;
+}
+
+/*------------> Tabla */
+
+.table{
+   overflow-x: auto;
+}
+
+.table #myTable{
+    border: 1px solid rgb(209, 209, 209);
+}
+
+.table #myTable thead{
+    background-color: var(--color-tabla);
+}
+
+/* -----------> Botones */
+
+.buttons{
+    padding: 50px;
+}
+
+.buttons #eliminarDato{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: var(--color-boton-eliminar);
+}
+
+.buttons #actualizarDato{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: var(--color-boton-actualizar);
+}
+
+.buttons #eliminarDato:hover{
+    transition: 0.3s;
+    background: var(--color-boton-eliminar-hover);
+}
+
+.buttons #actualizarDato:hover{
+    transition: 0.3s;
+    background: var(--color-boton-actualizar-hover);
+}
+
+.buttons #detalles{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: var(--color-boton-actualizar);
+}
+
+.buttons #detalles:hover{
+    transition: 0.3s;
+    background: var(--color-boton-actualizar-hover);
+}
+
+/* Filtros */
+.date-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.date-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px; /* Ancho adaptable */
+}
+
+.date-input label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.date-input input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* -----------> Responsive */
+
+@media (max-width: 820px){
+
+    .buttons{
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: stretch !important;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .date-input {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .date-input input {
+        font-size: 12px;
+    }
+}

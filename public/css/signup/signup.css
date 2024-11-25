@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Rethink Sans", sans-serif;
+}
+
+body {
+    height: 100vh; 
+    margin: 0;    
+    background: linear-gradient(to bottom right, #cecece, #ff8c39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+
+.introduction h1{
+    color: white;
+    font-size: 30px;
+}
+
+.introduction p{
+    color: white;
+}
+
+p, h1, label {
+    color: black;
+}
+
+h1{
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+p,label{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+form{
+    padding-left:30px;
+}
+
+.container{
+    width: 900px;
+}
+
+.row {
+    background-color: rgb(245, 245, 245);
+    color: white;
+    border-radius: 2rem;
+    width: 100%;
+    min-height: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.message {
+    background-color: #ff8c39;
+    color: white;
+    border-top-left-radius: 10rem; 
+    border-bottom-left-radius: 10rem; 
+    border-top-right-radius: 2rem; 
+    border-bottom-right-radius: 2rem;
+    min-height: 800px;
+}
+
+input {
+    width: 90%;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(182, 182, 182);
+    height: 40px;
+}
+
+input:focus {
+    border: 2px solid rgb(255, 133, 111);
+    outline: none;
+    transition: 0.4s;
+}
+
+.send{
+    background-color: #ff8c39;
+    border-radius: 2rem;    
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 7px;
+    width: 150px;
+    border: 1px solid white;
+}
+
+
+.send:hover{
+    background-color: #ffffff;
+    color:#ff8c39;
+    border: 1px solid #ff8c39; 
+}
+
+
+.sign-up{
+    color: rgb(131, 131, 131);
+}
+
+hr{
+    color: black ;
+}
+
+/* Inicio de sesión con google */
+.google{
+    border: 1px solid gray;
+    border-radius: 2rem;  
+    width:250px; 
+}
+
+.google i{
+    padding: 10px;
+    color:black
+}
+.google a{
+   text-decoration: none;
+   color: black;
+}
+
+.google:hover {
+    border: 1px solid rgb(212, 212, 212);
+    background-color: rgb(49, 49, 49);
+    transition: 0.3s;
+}
+
+.google:hover a {
+    color: white;
+}
+
+.google:hover i {
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .message {
+        display: none !important;
+    }
+    .container{
+        width: 350px;
+    }
+}

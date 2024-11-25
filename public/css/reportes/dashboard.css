@@ -1,0 +1,22 @@
+
+.card {
+    background-color: #d4b398;
+    color: #333333;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+.btn-primary {
+  background-color: #b88a64; 
+  color: white; 
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #745531;
+}
+
+
+
+

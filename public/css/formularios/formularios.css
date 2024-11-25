@@ -1,0 +1,87 @@
+:root {
+    --fuente-titulo: "Jockey One", serif;
+    --fuente-texto: "Inter", serif;
+    --color-inputs: #EBEAEA;
+    --color-fuente-inputs: #AAAAAA;
+    --color-btn-env: #d4b398;
+    --color-btn-reg: #b88a64;
+    --espacio-interior: 10px;
+    --ancho-inputs: 80%;
+    --borde-redondo: 1.5rem;
+}
+
+.title h1, h6 {
+    font-family: var(--fuente-titulo);
+}
+
+.formulario {
+    font-family: var(--fuente-texto);
+}
+
+.formulario h6 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+}
+
+.formulario input{
+    background-color: var(--color-inputs);
+    padding: var(--espacio-interior);
+    border-radius: var(--borde-redondo);
+    border: none;
+    outline: none;
+    width: var(--ancho-inputs);
+}
+
+.formulario input::placeholder {
+    color: var(--color-fuente-inputs);
+}
+
+.formulario .contenedor {
+    background-color: var(--color-inputs);
+    border-radius: var(--borde-redondo);
+    padding: var(--espacio-interior);
+    width: var(--ancho-inputs);
+    color: var(--color-fuente-inputs);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulario .contenedor label {
+    text-align: center;
+}
+
+input[type="date"] {
+    color: var(--color-fuente-inputs);
+}
+
+.contenedor select {
+    background: none;
+    border: none;
+    color: var(--color-fuente-inputs);
+}
+
+.formulario .descripcion {
+    padding-bottom: 90px;
+    background-color: var(--color-inputs);
+    border-radius: var(--borde-redondo);
+    width: var(--ancho-inputs);
+}
+
+.btn-enviar, .btn-regresar {
+    width: 120px;
+    font-family: var(--fuente-texto);
+    border: none;
+    border-radius: var(--borde-redondo);
+    padding: 5px 25px;
+    font-weight: bold;
+
+}
+
+.btn-enviar {
+    background-color: var(--color-btn-env);
+}
+
+.btn-regresar {
+    background-color: var(--color-btn-reg);
+}

@@ -1,0 +1,140 @@
+
+/*---------------->Título*/
+header .titulo {
+    background-color: #f0e0d3;
+    border-radius: 0 0 50px 50px;
+    padding: 30px 0;
+}
+
+header .titulo h2::after {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 4px;
+    background-color: #b88a64;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+header .titulo img {
+    height: 200px;
+}
+
+/*---------------->Sección de características*/
+
+.caracteristicas {
+    margin: 0 auto;
+}
+
+.caracteristicas .caracteristica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.row .caracteristica i {
+    color: #b88a64;
+    font-size: 2rem;
+}
+
+.row .caracteristica p {
+    font-size: 16px;
+}
+
+
+/*---------------->Cuerpo*/
+
+.disenos h3 {
+    color: #b88a64;
+    text-align: center;
+}
+
+.disenos .pasteles {
+    margin: 20px 10px;
+}
+
+.disenos .pasteles .pastel .card{
+    text-align: center;
+    border: none;
+}
+
+.disenos .pasteles .pastel .card .card-body .card-title {
+    font-weight: bolder;
+}
+
+.disenos .pasteles .pastel .card .card-img-wrapper img{
+    width: 250px;
+}
+
+.registrate .curva {
+    width: 100%;
+    height: 850px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0e0d3;
+    --mask:
+        radial-gradient(41.38px at 50% 58.5px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+        radial-gradient(41.38px at 50% -28.5px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+}
+
+
+.registrate .curva h3{
+    margin-top: 90px;
+}
+
+.registrate .curva img{
+    margin-top: 40px;
+    width: 75%;
+}
+
+.registrate .curva a {
+    background-color: #b88a64;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 1.5rem;
+    margin-top: 40px;
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+.registrate .curva a:hover{
+    background-color: #d4b398;
+    color: black;
+}
+
+
+/*---------------->Footer*/
+
+footer{
+    max-width: 100%;
+    background-color: #ffeaea;
+    position: relative;
+}
+
+footer .container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%;
+    max-width: 100%;
+/*     padding-left:20px;
+    padding-right: 20px; */
+}
+
+footer .container .row{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+footer .container .row a{
+    text-decoration: none;
+    color: black;
+}
